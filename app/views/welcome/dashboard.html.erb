@@ -1,0 +1,11 @@
+<h1><%= @user.email %>'s Dashboard</h1>
+<div class="prospects">
+<h2>My Prospects</h2>
+<% @user.prospects.each do |prospect|%>
+  <p><%= prospect.name %></p>
+  <p><%= prospect.phone %></p>
+  <small>
+    lead submitted <%= time_ago_in_words(prospect.created_at)  %> ago
+  </small>
+<% end %>
+</div>

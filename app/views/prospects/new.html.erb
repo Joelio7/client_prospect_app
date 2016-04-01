@@ -1,0 +1,19 @@
+<h1>New Prospect for <%= current_user.email %></h1>
+
+<div class="names">
+<%= form_for @prospect, remote: true do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <button class="pure-button ">Submit Name</button>
+</div>
+
+  <div class="phone-number">
+  <%= f.label :phone %>:
+  <%= f.text_field :phone %><br />
+
+  <div class="submit">
+  <%= f.submit %>
+</div>
+</div>
+<% end %>

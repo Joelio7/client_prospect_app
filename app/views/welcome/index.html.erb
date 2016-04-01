@@ -1,1 +1,5 @@
-<h1>welcome</h1>
+<h1>welcome prospects!</h1>
+<h2>current clients available</h2>
+<% @users.each do |user|%>
+  <p><%= user.email %> <button><%= link_to "contact me", new_prospect_path %></button></p>
+  <% end %>
